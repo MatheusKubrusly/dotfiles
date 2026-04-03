@@ -1,16 +1,31 @@
 #!/bin/bash
-echo "[*] Deploying Matheus Kubrusly's Setup..."
-mkdir -p ~/.config
 
-# Automatically initialize and download all inherited repositories
+# --- Configuration ---
+REPO_PATH="$HOME/Repositories/dotfiles"
+GREEN='\033[0;32m'
+NC='\033[0m' # No Color
+
+echo -e "${GREEN}[*] Initializing Aged Phosphor Deployment...${NC}"
+
+# 1. Sync Submodules (Restores Trinity and other inherited repos)
+echo "[*] Syncing submodules..."
+cd "$REPO_PATH" || exit
 git submodule update --init --recursive
 
-ln -sfn ~/Repositories/dotfiles/alacritty ~/.config/
-ln -sfn ~/Repositories/dotfiles/hypr ~/.config/
-ln -sfn ~/Repositories/dotfiles/swaync ~/.config/
-ln -sfn ~/Repositories/dotfiles/waybar ~/.config/
-ln -sfn ~/Repositories/dotfiles/wofi ~/.config/
-ln -sfn ~/Repositories/dotfiles/.themes ~/
-ln -sfn ~/Repositories/dotfiles/.icons ~/
+# 2. Ensure target directories exist
+mkdir -p ~/.config
 
-echo "[*] Deployment Complete!"
+# 3. Symlink Configuration Folders
+echo "[*] Linking configuration directories..."
+folders=("alacritty" "hypr" "waybar" "wofi" "swaync")
+
+for folder in "${folders[@]}"; do
+    ln -sfn "$REPO_PATH/$folder" "$HOME/.config/$folder"
+done
+
+# 4. Symlink Visual Assets (Themes & Icons)
+echo "[*] Linking visual assets..."
+ln -sfn "$REPO_PATH/.themes" "$HOME/.themes"
+ln -sfn "$REPO_PATH/.icons"  "$HOME/.icons"
+
+echo -e "${GREEN}[*] Deployment Complete. Systems operational.${NC}"
