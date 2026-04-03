@@ -1,0 +1,43 @@
+Date: Oct 02 2023 
+Product's name: E-v2020-green
+author: missTell 
+
+About:
+=====
+Green recolored original blue-colored cursor theme, to better match Bodhi Linux Moksha Green theme.
+
+=======================
+=======================
+
+Date: Dec 10 2020 
+Product's name: E-v2020
+author: Darkeye90 
+
+Definition:
+==========
+E-v2020 is a cursor theme that is matched my modified enlightenment default theme. 
+I hope you like it.
+
+Size:
+=====
+32x32.
+
+Installation:
+=============
+copy E-v2020 to ~/.themes directory
+cp -a E-v2020 ~/.icons
+
+Support:
+========
+You can support me by buying me a coffee 0_0
+https://ko-fi.com/darkeye
+or 
+find something you like here
+https://society6.com/darkeye90
+
+
+Credit:
+Enlightenment
+https://www.enlightenment.org
+darkmod
+https://github.com/simotek/Enlightenment-Themes
