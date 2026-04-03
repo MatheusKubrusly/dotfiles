@@ -1,0 +1,6 @@
+[submodule "darkmint"]
+	path = darkmint
+	url = https://github.com/originalseed/darkmint.git
+[submodule "Trinity"]
+	path = Trinity
+	url = https://github.com/gtk-upgraded/Trinity.git
