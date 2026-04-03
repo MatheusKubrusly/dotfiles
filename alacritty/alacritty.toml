@@ -1,0 +1,44 @@
+# --- 1. WINDOW AESTHETICS ---
+[window]
+padding = { x = 10, y = 10 }
+dynamic_padding = true
+# Setting opacity to 1.0 removes ALL transparency
+opacity = 1.0 
+blur = false
+
+# --- 2. TYPOGRAPHY (The Meslo from your screenshot) ---
+[font]
+size = 11.0
+
+[font.normal]
+family = "MesloLGL Nerd Font Mono"
+style = "Regular"
+
+[font.bold]
+family = "MesloLGL Nerd Font Mono"
+style = "Bold"
+
+[font.italic]
+family = "MesloLGL Nerd Font Mono"
+style = "Italic"
+
+# --- 2. THE CLASSIC BLACK PALETTE ---
+[colors.primary]
+# Pure, solid black background just like the conventional terminal
+background = "#000000" 
+# Crisp white/light-grey text
+foreground = "#dddddd"
+
+[colors.normal]
+black =   "#32344a"
+red =     "#f7768e"
+green =   "#9ece6a"
+yellow =  "#e0af68"
+blue =    "#7aa2f7"
+magenta = "#ad8ee6"
+cyan =    "#44dfaf"
+white =   "#787c99"
+
+[colors.cursor]
+text = "#1a1b26"
+cursor = "#c0caf5"

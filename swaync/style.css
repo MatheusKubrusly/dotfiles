@@ -1,0 +1,142 @@
+/* --- Global Variables --- */
+@define-color term-green #32a852;
+@define-color term-bg rgba(5, 15, 5, 0.90);
+@define-color term-hover rgba(50, 168, 82, 0.2);
+
+/* --- Base Reset --- */
+* {
+    font-family: 'Courier New', Courier, monospace;
+    background-clip: padding-box;
+}
+
+/* --- FIX: Fundo Invisível para as Notificações --- */
+.floating-notifications {
+    background-color: transparent;
+    border: none;
+}
+
+.blank-window {
+    background-color: transparent;
+}
+
+/* --- Pop-up Notifications --- */
+.notification-row {
+    outline: none;
+    margin-bottom: 10px;
+}
+
+.notification {
+    background-color: @term-bg;
+    border: 2px solid @term-green;
+    border-radius: 0px; 
+    box-shadow: 0 0 8px rgba(50, 168, 82, 0.2);
+    padding: 12px;
+}
+
+.notification-content {
+    background-color: transparent;
+}
+
+.summary {
+    color: @term-green;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 0 0 2px rgba(50, 168, 82, 0.5);
+    margin-bottom: 4px;
+}
+
+.body {
+    color: @term-green;
+    font-size: 14px;
+    text-shadow: 0 0 1px rgba(50, 168, 82, 0.3);
+}
+
+/* --- Control Center (The Slide-out Panel) --- */
+.control-center {
+    background-color: @term-bg;
+    border: 2px solid @term-green;
+    border-radius: 0px;
+    box-shadow: 0 0 15px rgba(50, 168, 82, 0.2);
+}
+
+/* Control Center Title / Header */
+.widget-title {
+    color: @term-green;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px;
+    text-shadow: 0 0 3px rgba(50, 168, 82, 0.5);
+}
+
+.widget-title > button {
+    color: @term-bg;
+    background-color: @term-green;
+    border: none;
+    border-radius: 0px;
+    font-weight: bold;
+    padding: 4px 8px;
+}
+
+.widget-title > button:hover {
+    background-color: white;
+    color: black;
+}
+
+/* DND Protocol Switch */
+.widget-dnd {
+    color: @term-green;
+    margin: 10px;
+}
+
+.widget-dnd > switch {
+    background-color: transparent;
+    border: 1px solid @term-green;
+    border-radius: 0px;
+}
+
+.widget-dnd > switch:checked {
+    background-color: @term-green;
+}
+
+.widget-dnd > switch slider {
+    background-color: @term-green;
+    border-radius: 0px;
+}
+
+/* Empty Log State */
+.control-center .notification-row:last-child, 
+.control-center .notification-row:empty {
+    color: @term-green;
+    opacity: 0.5;
+}
+
+/* --- Buttons Grid (Wi-Fi Toggle) --- */
+.widget-buttons-grid {
+    margin: 10px;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button {
+    background-color: transparent;
+    color: @term-green;
+    border: 1px solid @term-green;
+    border-radius: 0px;
+    padding: 8px;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button:hover {
+    background-color: @term-hover;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button:checked {
+    background-color: @term-green;
+    color: @term-bg;
+    font-weight: bold;
+}
+
+/* --- Hide Close Buttons --- */
+.close-button {
+    background-color: transparent;
+    color: transparent;
+    border: none;
+}

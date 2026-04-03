@@ -1,0 +1,92 @@
+/* =============================================================================
+ * WAYBAR HACKER ARCHITECT STYLE
+ * =========================================================================== */
+@define-color main-color #32a852;
+
+* {
+    border: none;
+    border-radius: 0;
+    /* Use a mesma fonte monoespaçada do seu terminal e do hyprlock */
+    font-family: "JetBrains Mono Nerd Font", "FiraCode Nerd Font", monospace;
+    font-size: 13px;
+    min-height: 0;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+/* O fundo da barra: Preto absoluto com uma linha verde fina embaixo */
+window#waybar {
+    background-color: #000000;
+    color: #ccffcc;
+    border-bottom: 1px solid #32a852;
+}
+
+/* Espaçamento geral dos blocos de texto */
+#workspaces, #window, #clock, #cpu, #memory, #battery, #network, #bluetooth, #tray {
+    padding: 0 6px;
+    margin: 0 2px;
+    color: #32a852; /* Verde esmaecido padrão */
+}
+
+/* --- WORKSPACES --- */
+#workspaces button {
+    padding: 0 2px;
+    background: transparent;
+    color: #32a852; /* Verde muito escuro para workspaces inativos */
+}
+
+#workspaces button.active {
+    color: #32a852; /* Verde brilhante para o workspace atual */
+    font-weight: bold;
+}
+
+#workspaces button:hover {
+    background: transparent;
+    text-shadow: 0 0 5px #32a852; /* Efeito CRT leve ao passar o mouse */
+}
+
+/* --- JANELA ATIVA --- */
+#window {
+    color: #00ef8e;
+}
+
+/* --- MÓDULOS DA DIREITA --- */
+#clock {
+    color: #32a852;
+    font-weight: bold;
+}
+
+#battery.charging {
+    color: #32a852; /* Keeps it green while charging */
+}
+
+/* Alertas de Bateria Crítica  */
+#battery.warning:not(.charging) {
+    color: #ccaa00;
+}
+#battery.critical:not(.charging) {
+    color: #ff3333;
+    font-weight: bold;
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-timing-function: step-end; /* Faz a cor "bater" de uma vez em vez de suavizar */
+}
+
+@keyframes blink {
+    to {
+        color: #000000;
+        background-color: #ff0000;
+    }
+}
+
+/* --- RIGHT SIDE SYSTEM MODULES --- */
+#battery,
+#network,
+#bluetooth,
+#pulseaudio,
+#tray {
+    color: #32a852;
+    font-weight: bold; /* Matches the bold text of your clock */
+}

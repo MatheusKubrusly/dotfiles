@@ -1,0 +1,13 @@
+width=600
+height=400
+location=center
+show=drun
+prompt=
+allow_markup=true
+no_actions=true
+halign=fill
+orientation=vertical
+content_halign=fill
+hide_scroll=true
+# Descomente a linha abaixo se quiser esconder os ícones dos programas
+# allow_images=false

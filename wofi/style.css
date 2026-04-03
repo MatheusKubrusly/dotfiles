@@ -1,0 +1,67 @@
+/* --- Estilo Wofi: Aged Phosphor Terminal --- */
+
+* {
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+    border-radius: 0px; /* Bordas retas, sem curvas modernas */
+}
+
+/* A janela principal */
+window {
+    margin: 0px;
+    border: 2px solid #32a852; /* O seu verde exato */
+    background-color: rgba(5, 15, 5, 0.95); /* Fundo escuro levemente transparente */
+}
+
+/* O campo de digitação */
+#input {
+    margin: 15px;
+    padding: 10px;
+    border: 1px solid #32a852;
+    color: #32a852;
+    background-color: rgba(0, 0, 0, 0.5); /* Preto interno pro campo de busca */
+    box-shadow: none;
+}
+
+#input:focus {
+    border: 2px solid #32a852;
+    box-shadow: 0 0 5px rgba(50, 168, 82, 0.5); /* Efeito glow CRT ao digitar */
+}
+
+/* A caixa interna que guarda as opções */
+#inner-box {
+    margin: 5px 15px 15px 15px;
+    border: none;
+    background-color: transparent;
+}
+
+#outer-box {
+    margin: 5px;
+    border: none;
+    background-color: transparent;
+}
+
+/* O texto dos programas na lista */
+#text {
+    margin: 5px;
+    color: #32a852; /* Verde suave para os inativos */
+}
+
+/* O container de cada linha da lista */
+#entry {
+    padding: 5px;
+    border: none;
+}
+
+/* O item que está SELECIONADO no momento */
+#entry:selected {
+    background-color: #32a852; /* O fundo vira um bloco verde sólido */
+    border: none;
+    outline: none;
+}
+
+/* O texto do item selecionado vira preto (inversão de cores) */
+#entry:selected #text {
+    color: #050f05; 
+    font-weight: bold;
+}
